@@ -1,0 +1,56 @@
+.main_body {
+    background-image: url('../images/table_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ /* Custom CSS for the table */
+.table {
+    font-size: 16px;
+    border-radius: 10px; /* Add border radius */
+    overflow: hidden; /* Ensure rounded corners are visible */
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Additional custom styles */
+.btn-danger {
+    background-color: #ff2400;
+    border-color: #ff2400;
+}
+
+.btn-danger:hover {
+    background-color: #d9534f;
+    border-color: #d9534f;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Center the heading with background color */
+.container h2 {
+    text-align: center;
+    background-color: #455054; /* Change the background color here */
+    color: #fff;
+    padding: 10px;
+    border-radius:  0 0 10px 10px ; /* Add border radius */
+    overflow: hidden; /* Ensure rounded corners are visible */
+}
+
+.alert-success li{
+    list-style: none;
+}

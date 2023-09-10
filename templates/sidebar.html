@@ -1,0 +1,111 @@
+{% load static %}
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+      <a class="sidebar-brand brand-logo" href="index.html" style="color: aliceblue;"><h2>UMS</h2></a>
+      <a class="sidebar-brand brand-logo-mini" href="index.html" style="color: aliceblue;"><h3>UMS</h3></a>
+    </div>
+    <ul class="nav">
+      <li class="nav-item profile">
+        <div class="profile-desc">
+          <div class="profile-pic">
+            <div class="count-indicator">
+              <img class="img-xs rounded-circle " src="{% static 'assets/images/faces/face15.jpg' %}" alt="">
+              <span class="count bg-success"></span>
+            </div>
+            <div class="profile-name">
+              <h4 class="mb-0 font-weight-normal" style="color: aliceblue;">{{ user.username }}</h4>
+              <span>Super User</span>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item nav-category">
+        <span class="nav-link">Navigation</span>
+      </li>
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="{% url 'dashboard' %}">
+          <span class="menu-icon">
+            <i class="mdi mdi-speedometer"></i>
+          </span>
+          <span class="menu-title">Dashboard</span>
+        </a>
+      </li>
+
+      <!-- Departments -->
+      <li class="nav-item menu-items">
+        <a class="nav-link" data-toggle="collapse" href="#ui-dept" aria-expanded="false" aria-controls="ui-dept">
+          <span class="menu-icon">
+            <i class="fa-regular fa-building"></i>
+          </span>
+          <span class="menu-title">Departments</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-dept">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{% url 'create_dept' %}">Add Department</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{% url 'read_dept' %}">Show Departments</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- Students -->
+      <li class="nav-item menu-items">
+        <a class="nav-link" data-toggle="collapse" href="#ui-student" aria-expanded="false" aria-controls="ui-student">
+          <span class="menu-icon">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </span>
+          <span class="menu-title">Students</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-student">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{% url 'create_student' %}"> Add Student</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{% url 'read_student' %}">Show Students</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- Faculty -->
+      <li class="nav-item menu-items">
+        <a class="nav-link" data-toggle="collapse" href="#ui-faculty" aria-expanded="false" aria-controls="ui-faculty">
+          <span class="menu-icon">
+            <i class="fa-solid fa-chalkboard-user"></i>
+          </span>
+          <span class="menu-title">Faculty</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-faculty">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{% url 'create_faculty' %}">Add Faculty</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{% url 'read_faculty' %}">Show Faculty</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <!-- Courses -->
+      <li class="nav-item menu-items">
+        <a class="nav-link" data-toggle="collapse" href="#ui-course" aria-expanded="false" aria-controls="ui-course">
+          <span class="menu-icon">
+            <i class="fa-solid fa-book"></i>
+          </span>
+          <span class="menu-title">Course</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="ui-course">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="{% url 'create_course' %}">Add Course</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{% url 'read_course' %}">Show Courses</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item menu-items">
+        <a class="nav-link" href="">
+          <span class="menu-icon">
+            <i class="mdi mdi-file-document-box"></i>
+          </span>
+          <span class="menu-title">Documentation</span>
+        </a>
+      </li>
+    </ul>
+</nav>
